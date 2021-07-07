@@ -9,7 +9,7 @@ const PhotoDetail = (photo) => {
                 margin:0 auto;
             }`}
             </style>
-            <img alt='/' className="photo" src={photo.url} />
+            <img className="photo" src={photo.children.children.url} />
             <style jsx>{`
             .photo{
                 display:block;

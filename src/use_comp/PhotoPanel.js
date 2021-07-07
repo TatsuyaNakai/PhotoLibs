@@ -1,7 +1,7 @@
 import PhotoDetail from './PhotoDetail';
 
-const PhotoPanel = (props) => {
-    console.log({props});
+const PhotoPanel = (photo) => {
+    // console.log({photo});
 
     return (
         <div className='panel'>
@@ -13,10 +13,10 @@ const PhotoPanel = (props) => {
                 margin:0 auto;
             }`}
             </style>
-            <h3>{props.title}</h3>
-            <PhotoDetail 
-                url={props.url}
-            />
+            <h3>{photo.children.title}</h3>
+            <PhotoDetail>
+                {photo}
+            </PhotoDetail>
         </div>
     );
 }

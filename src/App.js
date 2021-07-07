@@ -7,7 +7,8 @@ function App() {
   return (
     <div>
       <h1>App コンポーネント</h1>
-      <PhotoListPage />
+      <PhotoListPage 
+      />
     </div>
   );
 }
