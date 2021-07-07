@@ -1,6 +1,7 @@
 import PhotoDetail from './PhotoDetail';
 
-const PhotoPanel = () => {
+const PhotoPanel = (photo) => {
+    // console.log({photo});
 
     return (
         <div className='panel'>
@@ -12,8 +13,10 @@ const PhotoPanel = () => {
                 margin:0 auto;
             }`}
             </style>
-            <h3>PhotoPanel</h3>
-            <PhotoDetail />
+            <h3>{photo.children.title}</h3>
+            <PhotoDetail>
+                {photo}
+            </PhotoDetail>
         </div>
     );
 }
