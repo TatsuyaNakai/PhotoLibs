@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import React,{ useState, useEffect, createContext } from 'react';
 import PhotoPanel from './PhotoPanel';
+
+export const photoContext=createContext();
 
 const PhotoListPage = () => {
     const [photos, setPhotos]=useState([]);       //初期状態で空になってる配列をphotoに作る。
@@ -28,9 +30,9 @@ const PhotoListPage = () => {
             <ul>
                 {photos.map((photo) => (
                     <li key={photo.id}>
-                        <PhotoPanel>
-                            {photo}
-                        </PhotoPanel>
+                        <photoContext.Provider value={photo}>       {/* 一番外でラップするとphotoが取れない */}
+                            <PhotoPanel />                          {/* photosで取ると4つの配列が取れるから、子コンポーネントに渡せない。 */}
+                        </photoContext.Provider>
                     </li>
                 ))}
             </ul>

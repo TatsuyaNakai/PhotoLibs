@@ -1,6 +1,11 @@
+import React,{useContext} from 'react';
+import {photoContext} from './PhotoListPage';
+
 import PhotoDetail from './PhotoDetail';
 
-const PhotoPanel = (photo) => {
+
+const PhotoPanel = () => {
+    const photo=useContext(photoContext);
     // console.log({photo});
 
     return (
@@ -13,10 +18,8 @@ const PhotoPanel = (photo) => {
                 margin:0 auto;
             }`}
             </style>
-            <h3>{photo.children.title}</h3>
-            <PhotoDetail>
-                {photo}
-            </PhotoDetail>
+            <h3>{photo.title}</h3>
+            <PhotoDetail />
         </div>
     );
 }

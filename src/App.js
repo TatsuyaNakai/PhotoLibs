@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import PhotoListPage from './components/PhotoListPage'
+import PhotoListPage from './use_comp/PhotoListPage'
 
 function App() {
 

@@ -1,7 +1,7 @@
 import PhotoDetail from './PhotoDetail';
 
 const PhotoPanel = (props) => {
-    console.log({props});
+    // console.log({props});
 
     return (
         <div className='panel'>

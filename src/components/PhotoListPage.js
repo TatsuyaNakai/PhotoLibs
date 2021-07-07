@@ -14,7 +14,7 @@ const PhotoListPage = () => {
         };
         callApi();       //一回呼ぶとsetPhotoが更新されて再レンダリングされるから、無限ループに陥る。　初回だけさせるなら、useEffectが必要になる。
     }, []);
-    console.log(photos);
+    // console.log(photos);
 
     return (
         <div className='page'>

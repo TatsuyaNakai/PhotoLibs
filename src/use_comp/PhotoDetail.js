@@ -1,5 +1,11 @@
-const PhotoDetail = (photo) => {
+import {useContext} from 'react';
+import {photoContext} from './PhotoListPage';
 
+
+const PhotoDetail = () => {
+    const photo=useContext(photoContext);
+
+    // const 
     return (
         <div className='detail'>
             <style jsx>{`
@@ -9,7 +15,7 @@ const PhotoDetail = (photo) => {
                 margin:0 auto;
             }`}
             </style>
-            <img className="photo" src={photo.children.children.url} />
+            <img className="photo" src={photo.url} />
             <style jsx>{`
             .photo{
                 display:block;
